@@ -17,14 +17,8 @@ function draw() {
   background("black");  
 drawSprites();
   bullet.velocityX=speed;
-  }
-function hasCollided(lbullet,lwall){
-  bulletRightEdge=lbullet.x + lbullet.width;
-  wallLeftEdge=lwall.x;
-  if (bulletRightEdge>=wallLeftEdge){
-  return true }
-  return false;
-}
+  
+
   
 
 if(hasCollided(bullet,wall)) {
@@ -38,4 +32,12 @@ if(hasCollided(bullet,wall)) {
   if(damage<10){
     wall.shapeColor=color(0,255,0);
   }
+}
+}
+function hasCollided(lbullet,lwall){
+  bulletRightEdge=lbullet.x + lbullet.width;
+  wallLeftEdge=lwall.x;
+  if (bulletRightEdge>=wallLeftEdge){
+  return true }
+  return false;
 }
